@@ -1,0 +1,531 @@
+/* Change theme */
+:root[data-theme="defaultcolor"] {
+    --logo-bg: #29418a;
+    --mainheader-bg: #001c71;
+    --btn-bg: #001c71;
+    --text-color: #001c71;
+    --text-leftmenu: rgba(157, 161, 183);
+    --text-active-page-bg: rgb(216, 216, 216);
+}
+
+:root[data-theme="orange"] {
+    --logo-bg: #ed9a36;
+    --mainheader-bg: #d47707;
+    --btn-bg: #d47707;
+    --text-color: #d47707;
+    --text-leftmenu: #d0a879;
+    --text-active-page-bg: #d0a879;
+}
+
+:root[data-theme="blue"] {
+    --logo-bg: #2d8cd0;
+    --mainheader-bg: #1377be;
+    --btn-bg: #1377be;
+    --text-color: #1377be;
+    --text-leftmenu: #84b4d6;
+    --text-active-page-bg: #84b4d6;
+}
+
+:root[data-theme="green"] {
+    --logo-bg: #188654;
+    --mainheader-bg: #0d653d;
+    --btn-bg: #0d653d;
+    --text-color: #0d653d;
+    --text-leftmenu: #88c4a9;
+    --text-active-page-bg: #88c4a9;
+}
+
+:root[data-theme="fiolet"] {
+    --logo-bg: #6747a1;
+    --mainheader-bg: #4b2b86;
+    --btn-bg: #4b2b86;
+    --text-color: #4b2b86;
+    --text-leftmenu: #a38dca;
+    --text-active-page-bg: #a38dca;
+}
+
+:root[data-theme="purpure"] {
+    --logo-bg: #a94d8d;
+    --mainheader-bg: #862b6a;
+    --btn-bg: #862b6a;
+    --text-color: #862b6a;
+    --text-leftmenu: #ce8ebb;
+    --text-active-page-bg: #ce8ebb;
+}
+
+/* Change mode */
+:root[data-mode="light"] {
+    --left-bg: #fff;
+    --main-bg: #eff1f6;
+    --containersbg: #fff;
+    --input-and-menu-bg: #fff;
+    --border: rgb(235, 235, 235) 1px solid;
+    --text-mode: #333333;
+}
+
+:root[data-mode="dark"] {
+    --left-bg: #222222;
+    --main-bg: #121212;
+    --containersbg: #222222;
+    --input-and-menu-bg: #333333;
+    --border: rgb(39, 39, 39) 1px solid;
+    --text-mode: #eff1f6;
+}
+
+
+
+.transfercoin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.transfercoin-div-h2 {
+    width: 880px;
+}
+
+.transfercoin-h2 {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.transfercoinh2-span {
+    margin-left: 5px;
+}
+
+.transfercoin-sentrecieve-and-transaction {
+    display: flex;
+    justify-content: space-between;
+    width: 880px;
+    height: 100%;
+    padding-bottom: 200px;
+}
+
+.transfercoin-sent-and-recieve {
+    display: flex;
+    flex-direction: column;
+    width: 505px;
+}
+
+.sent-and-recieve-btn {
+    display: flex;
+    align-self: flex-end;
+}
+
+.btn-sent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.btn-recieve {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.btn-active {
+    background-color: var(--btn-bg);
+    cursor: pointer;
+}
+
+.btn-nonactive {
+    background-color: var(--text-leftmenu);
+    cursor: pointer;
+}
+
+.transf-btn-icon-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+    font-size: 14px;
+}
+
+.transf-btn-rec-icon-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+    font-size: 14px;
+}
+
+.span-active {
+    color: var(--text-color);
+}
+
+.span-nonactive {
+    color: var(--text-leftmenu);
+}
+
+.transf-btn-text-span {
+    margin-left: 5px;
+}
+
+.sent-and-recieve-div {
+    margin-top: 20px;
+}
+
+/* Transhercoin sent section: */
+
+.transfercoin-sent-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--containersbg);
+    border-radius: 15px;
+}
+
+.transfercoin-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-left: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.transfercoin-sent-currency {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 45px;
+    border-radius: 5px;
+    border: rgba(90, 90, 90, 0.2) 1px solid;
+    box-shadow: 0px 0px 4px 2px rgba(90, 90, 90, 0.1);
+}
+
+.transfercoin-sent-currency-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    color: var(--text-mode);
+}
+
+.sent-currency-left-span {
+    margin-left: 10px;
+}
+
+.transfercoin-sent-currency-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    color: rgb(136, 136, 136);
+    font-size: 12px;
+}
+
+.transfercoin-currency-dropdown {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    padding: 0px;
+    margin-top: 50px;
+    list-style: none;
+    background-color: var(--input-and-menu-bg);
+    border: var(--border);
+    box-shadow: 0px 0px 4px 2px rgba(90, 90, 90, 0.1);
+    width: 200px;
+    border-radius: 5px;
+    color: var(--text-mode);
+}
+
+.currency-dropdown {
+    display: flex;
+    align-items: center;
+    border-bottom: var(--border);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.currency-dropdown-img {
+    margin-left: 10px;
+}
+
+.currency-dropdown-text {
+    margin-left: 10px;
+}
+
+.transfercoin-sent-toaddress {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    margin-top: 15px;
+}
+
+.transfercoin-sent-htext {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.transfercoin-sent-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: rgba(90, 90, 90, 0.2) 1px solid;
+    box-shadow: 0px 0px 4px 2px rgba(90, 90, 90, 0.1);
+    background-color: var(--input-and-menu-bg);
+}
+
+.transfercoin-sent-amount {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    margin-top: 15px;
+}
+
+.sent-coin-button {
+    width: 330px;
+    height: 45px;
+    background-color: var(--btn-bg);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Transhercoin recieve section: */
+
+.transfercoin-recieve-div {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--containersbg);
+    border-radius: 15px;
+}
+
+.transfercoin-recieve-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    margin-top: 30px;
+}
+
+.span-recieve-text-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(85, 85, 85);
+}
+
+.transfercoin-recieve-text-span {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(90, 90, 85)
+}
+
+.transfercoin-recieve-qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: var(--border);
+    margin-top: 15px;
+    box-shadow: 0px 0px 4px 2px rgba(90, 90, 90, 0.1);
+}
+
+.transfercoin-recieve-amount-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--border);
+    margin-top: 15px;
+    width: 440px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 2px rgba(90, 90, 90, 0.1);
+}
+
+.transfercoin-recieve-amount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: var(--border);
+}
+
+.recieve-amount-text {
+    color:rgb(136, 136, 136);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.recieve-amount-amount {
+    color: var(--text-color);
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.transfercoin-recieve-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.recieve-address-text {
+    color: rgb(74, 76, 78);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.recieve-address-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--input-and-menu-bg);
+    border: var(--border);
+    border-radius: 5px;
+    width: 395px;
+    height: 45px;
+    color: rgb(74, 76, 78);
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.transfercoin-recieve-btn {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 330px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--btn-bg);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.transfercoin-last-transaction {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: var(--containersbg);
+    border-radius: 15px;
+}
+
+.transfercoin-h2-transaction {
+    margin-left: 30px;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.transfercoin-last-tran {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-bottom: var(--border);
+}
+
+.transfercoin-last-tran-and-type {
+    display: flex;
+    align-items: center;
+}
+
+.faicontrans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.sent-type {
+    background-color: rgb(135, 214, 130);
+}
+
+.recieve-type {
+    background-color: rgb(122, 217, 227);
+}
+
+.faicontrans-icon {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.last-tran-type-and-wallet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.last-tran-type {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.last-tran-wallet {
+    font-weight: 400;
+    font-size: 14px;
+    color: #707070;
+}
+
+.last-tran-amount-and-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.last-tran-amount {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.last-tran-date {
+    font-weight: 400;
+    font-size: 14px;
+    color: #707070;
+}

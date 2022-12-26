@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="defaultcolor" data-mode="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/transfercoin.css">
+    <script src="https://kit.fontawesome.com/96fd5a386b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: rgba(204, 204, 204);
+            border-radius: 50px;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgba(185, 185, 185); 
+            border-radius: 50px;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    </style>
+    <title>Crypto Wallet</title>
+</head>
+<body>
+
+    <section class="left-menu">
+        <header class="left-menu-header">
+            <img src="images/logo.png" alt="logo">
+        </header>
+        <div class="left-menu-scroll">
+            <ul class="left-menu-pages-list">
+                <li class="pages-list-item">
+                    <a href="dashboard.html" id="dashboard-page-btn" class="leftmenu-a"><i class="fas fa-tachometer-alt leftmenupageicon"></i><span class="left-menu-page-page">Dashboard</span></a>
+                </li>
+                <li class="pages-list-item">
+                    <a href="mywallet.html"  id="mywallet-page-btn" class="leftmenu-a"><i class="fa-solid fa-wallet leftmenupageicon"></i><span class="left-menu-page-page">My Wallet</span></a>
+                </li>
+                <li class="pages-list-item active-page">
+                    <div href=""  id="transfercoin-page-btn" class="leftmenu-a active-page-a"><i class="fa-solid fa-coins leftmenupageicon"></i><span class="left-menu-page-page">Transfer Coin</span></div>
+                </li>
+                <li class="pages-list-item">
+                    <a href="transaction.html"  id="transaction-page-btn" class="leftmenu-a"><i class="fa-solid fa-clock-rotate-left leftmenupageicon"></i><span class="left-menu-page-page">Transaction</span></a>
+                </li>
+                <li class="pages-list-item">
+                    <a href="profile.html"  id="profile-page-btn" class="leftmenu-a"><i class="fa-solid fa-user leftmenupageicon"></i><span class="left-menu-page-page">Profile</span></a>
+                </li>
+                <li class="pages-list-item">
+                    <a href=""  id="logout-page-btn" class="leftmenu-a"><i class="fa-solid fa-right-from-bracket leftmenupageicon"></i><span class="left-menu-page-page">Logout</span></a>
+                </li>
+            </ul>
+            <div class="left-menu-color-switcher">
+                <h4 class="color-switcher-text">COLOR SWITCHER</h4>
+                <ul class="color-switcher-list">
+                    <li id="defaultcolor" class="color-list-item"></li>
+                    <li id="orange" class="color-list-item"></li>
+                    <li id="blue" class="color-list-item"></li>
+                    <li id="green" class="color-list-item"></li>
+                    <li id="fiolet" class="color-list-item"></li>
+                    <li id="purpure" class="color-list-item"></li>
+                </ul>
+            </div>
+            <div class="left-menu-dark-mode">
+                <div class="darkmodetext">Dark Mode</div>
+                <div class="sun-and-moon">
+                    <div class="mode-light">
+                        <div class="mode-sphere-light"></div>
+                    </div>
+                    <div class="mode-dark">
+                        <div class="mode-sphere-dark"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <header class="main-header">
+            <div class="main-header-balance">
+                <span class="main-header-icon-wallet"><i class="fa-solid fa-wallet"></i></span>
+                <div class="balancetext-and-current">
+                    <div class="total-blnc-text">Total balance</div>
+                    <div class="total-blnc-digits">657.0378348945 <span>USD</span></div>
+                </div>
+            </div>
+            <div class="main-header-right">
+                <div class="language-dropdown">
+                    <div class="language">
+                        <img src="images/us.png" alt="us" width="25px" height="13px">
+                        <div class="choose-lang">English <span class="main-header-lang-arrow"><i class="fa-solid fa-caret-down"></i></span></div>
+                    </div>
+                    <div class="language-menu">
+                        <ul class="language-menu-ul">
+                            <li class="language-menu-lang"><img src="images/us.png" alt="us" width="25px" height="13px"><span class="lang-name">English</span></li>
+                            <li class="language-menu-lang"><img src="images/united-kingdom.png" alt="uk" width="25px" height="13px"><span class="lang-name">English</span></li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="main-header-notify">
+                    <div class="main-header-notify-icon"><i class="fa-solid fa-bell"></i></div>
+                    <div class="notify-dropdown">
+                        <div class="notify-dropdown-head">You have 3 new notifications.</div>
+                        <ul class="notify-dropdown-ul">
+                            <li class="notify-dropdown-li">
+                                <div class="notify-dropdown-li-icon typenotify-done">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="notify-dropdown-li-right">
+                                    <div class="notify-dropdown-li-text">Successful transaction of 0.01 BTC</div>
+                                    <div class="notify-dropdown-li-time">15 mins ago</div>
+                                </div>
+                            </li>
+                            <li class="notify-dropdown-li">
+                                <div class="notify-dropdown-li-icon typenotify-warn">
+                                    <i class="fa-solid fa-exclamation"></i>
+                                </div>
+                                <div class="notify-dropdown-li-right">
+                                    <div class="notify-dropdown-li-text">4 of Pending Transactions!</div>
+                                    <div class="notify-dropdown-li-time">45 mins ago</div>
+                                </div>
+                            </li>
+                            <li class="notify-dropdown-li">
+                                <div class="notify-dropdown-li-icon typenotify-x">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <div class="notify-dropdown-li-right">
+                                    <div class="notify-dropdown-li-text">Cancelled Transaction of 20 BTC</div>
+                                    <div class="notify-dropdown-li-time">1 hour ago</div>
+                                </div>
+                            </li>
+                            <li class="notify-dropdown-li">
+                                <div class="notify-dropdown-li-icon typenotify-x">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <div class="notify-dropdown-li-right">
+                                    <div class="notify-dropdown-li-text">Cancelled Transaction of 5 BTC</div>
+                                    <div class="notify-dropdown-li-time">1 hour ago</div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="read-all-notify">Read All Notifications</div>
+                    </div>
+                </div>
+                <div class="main-header-user-info-dropdown">
+                    <div class="main-header-user-info">
+                        <img class="main-header-profile-photo" src="images/profile.jpg" alt="" width="35px" height="35px" >
+                        <div class="main-header-user-name">
+                            <div class="main-header-welc-back">Welcome Back</div>
+                            <div class="main-header-name">Greg Smith <span class="main-header-name-arrow"><i class="fa-solid fa-chevron-down"></i></span></div>
+                        </div>
+                    </div>
+                    <div class="header-user-menu">
+                        <ul class="header-user-menu-ul">
+                            <li class="header-user-menu-page"><a href="profile.html"><span class="header-user-menu-li-span"><i class="fa-solid fa-user"></i></span><span class="header-info-user-li-text">Profile</span></a></li>
+                            <li class="header-user-menu-page"><a href="mywallet.html"><span class="header-user-menu-li-span"><i class="fa-solid fa-wallet"></i></span><span class="header-info-user-li-text">My Wallet</span></a></li>
+                            <li class="header-user-menu-page"><a href=""><span class="header-user-menu-li-span"><i class="fa-solid fa-right-from-bracket"></i></span><span class="header-info-user-li-text">Logout</span></a></li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </header>
+
+        <div class="transfercoin">
+            <div class="transfercoin-div-h2">
+                <h2 class="transfercoin-h2"><span><i class="fa-solid fa-coins"></i></span><span class="transfercoinh2-span">Transfer Coin</span></h2>
+            </div>
+            
+            <div class="transfercoin-sentrecieve-and-transaction">
+                <div class="transfercoin-sent-and-recieve">
+                    <div class="sent-and-recieve-btn">
+                        <button class="btn-sent btn-active">
+                            <div class="transf-btn-icon-span span-active"><i class="fa-solid fa-arrow-up"></i></div><span class="transf-btn-text-span">Sent</span>
+                        </button>
+                        <button class="btn-recieve btn-nonactive">
+                            <div class="transf-btn-rec-icon-span span-nonactive"><i class="fa-solid fa-arrow-down"></i></div><span class="transf-btn-text-span">Recieve</span>
+                        </button>
+                    </div>
+                    <div class="sent-and-recieve-div">
+                        <div class="transfercoin-sent-div">
+                            <div class="transfercoin-dropdown">
+                                <div class="transfercoin-sent-currency">
+                                    <div class="transfercoin-sent-currency-left">
+                                        <img src="images/btc.png" alt="" width="20px" height="20px"><span class="sent-currency-left-span">BTC</span>
+                                    </div>
+                                    <div class="transfercoin-sent-currency-right"><i class="fa-sharp fa-solid fa-caret-down"></i></div>
+                                </div>
+                                <ul class="transfercoin-currency-dropdown">
+                                    <li class="currency-dropdown"><img class="currency-dropdown-img" src="images/btc.png" alt="" width="20px" height="20px"><span class="currency-dropdown-text">BTC</span></li>
+                                    <li class="currency-dropdown"><img class="currency-dropdown-img" src="images/ltc.png" alt="" width="20px" height="20px"><span class="currency-dropdown-text">LTC</span></li>
+                                    <li class="currency-dropdown"><img class="currency-dropdown-img" src="images/eth.png" alt="" width="20px" height="20px"><span class="currency-dropdown-text">ETH</span></li>
+                                    <li class="currency-dropdown"><img class="currency-dropdown-img" src="images/xrp.png" alt="" width="20px" height="20px"><span class="currency-dropdown-text">XRP</span></li>
+                                    <li class="currency-dropdown"><img class="currency-dropdown-img" src="images/bch.png" alt="" width="20px" height="20px"><span class="currency-dropdown-text">BCH</span></li>
+                                </ul>
+                            </div>   
+                            <div class="transfercoin-sent-toaddress">
+                                <div class="transfercoin-sent-htext">To Address</div>
+                                <input class="transfercoin-sent-input" type="text">
+                            </div>
+                            <div class="transfercoin-sent-amount">
+                                <div class="transfercoin-sent-htext">Amount to send</div>
+                                <input class="transfercoin-sent-input" type="text">
+                            </div>
+                            <button class="sent-coin-button">Sent Coin</button>
+                        </div>
+                        <div class="transfercoin-recieve-div">
+                            <div class="transfercoin-recieve-text">
+                                <div class="span-recieve-text-icon">!</div><span class="transfercoin-recieve-text-span">Please Verify the Address and Amount properly. Sent BTC can not be reversed in any case.</span>
+                            </div>
+                            <div class="transfercoin-recieve-qr">
+                                <div>
+                                    <img src="images/code-scan.png" alt="" width="160px" height="160px">
+                                </div>
+                            </div>
+                            <div class="transfercoin-recieve-amount-address">
+                                <div class="transfercoin-recieve-amount">
+                                    <div class="recieve-amount-text">Amount</div>
+                                    <div class="recieve-amount-amount">0.00001 BTC</div>
+                                </div>
+                                <div class="transfercoin-recieve-address">
+                                    <div class="recieve-address-text">Address</div>
+                                    <div  class="recieve-address-address">AzmKSDkadAJDEladeidmaJAdkaskdae</div>
+                                </div>
+                            </div>
+                            <button class="transfercoin-recieve-btn">Receive Coin</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="transfercoin-transaction">
+                    <div class="transfercoin-last-transaction">
+                        <h2 class="transfercoin-h2-transaction">Transaction</h2>
+    
+                        <div class="transfercoin-last-tran">
+                            <div class="transfercoin-last-tran-and-type">
+                                <div class="faicontrans sent-type">
+                                    <span class="faicontrans-icon"><i class="fa-solid fa-arrow-up"></i></span>
+                                </div>
+                                <div class="last-tran-type-and-wallet">
+                                    <div class="last-tran-type">BTC</div>
+                                    <div class="last-tran-wallet">Sent</div>
+                                </div>
+                            </div>
+                            <div class="last-tran-amount-and-date">
+                                <div class="last-tran-amount">$ 405.34</div>
+                                <div class="last-tran-date">11 Dec 2022</div>
+                            </div>
+                        </div>
+    
+                        <div class="transfercoin-last-tran">
+                            <div class="transfercoin-last-tran-and-type">
+                                <div class="faicontrans recieve-type">
+                                    <span class="faicontrans-icon"><i class="fa-solid fa-arrow-down"></i></span>
+                                </div>
+                                <div class="last-tran-type-and-wallet">
+                                    <div class="last-tran-type">LTC</div>
+                                    <div class="last-tran-wallet">Recieve</div>
+                                </div>
+                            </div>
+                            <div class="last-tran-amount-and-date">
+                                <div class="last-tran-amount">$ 235.11</div>
+                                <div class="last-tran-date">10 Dec 2022</div>
+                            </div>
+                        </div>
+    
+                        <div class="transfercoin-last-tran">
+                            <div class="transfercoin-last-tran-and-type">
+                                <div class="faicontrans sent-type">
+                                    <span class="faicontrans-icon"><i class="fa-solid fa-arrow-up"></i></span>
+                                </div>
+                                <div class="last-tran-type-and-wallet">
+                                    <div class="last-tran-type">XRP</div>
+                                    <div class="last-tran-wallet">Sent</div>
+                                </div>
+                            </div>
+                            <div class="last-tran-amount-and-date">
+                                <div class="last-tran-amount">$ 567.09</div>
+                                <div class="last-tran-date">10 Dec 2022</div>
+                            </div>
+                        </div>
+    
+                        <div class="transfercoin-last-tran">
+                            <div class="transfercoin-last-tran-and-type">
+                                <div class="faicontrans recieve-type">
+                                    <span class="faicontrans-icon"><i class="fa-solid fa-arrow-down"></i></span>
+                                </div>
+                                <div class="last-tran-type-and-wallet">
+                                    <div class="last-tran-type">BTC</div>
+                                    <div class="last-tran-wallet">Recieve</div>
+                                </div>
+                            </div>
+                            <div class="last-tran-amount-and-date">
+                                <div class="last-tran-amount">$ 122.50</div>
+                                <div class="last-tran-date">9 Dec 2022</div>
+                            </div>
+                        </div>
+    
+                        <div class="transfercoin-last-tran">
+                            <div class="transfercoin-last-tran-and-type">
+                                <div class="faicontrans sent-type">
+                                    <span class="faicontrans-icon"><i class="fa-solid fa-arrow-up"></i></span>
+                                </div>
+                                <div class="last-tran-type-and-wallet">
+                                    <div class="last-tran-type">ETH</div>
+                                    <div class="last-tran-wallet">Sent</div>
+                                </div>
+                            </div>
+                            <div class="last-tran-amount-and-date">
+                                <div class="last-tran-amount">$ 388.42</div>
+                                <div class="last-tran-date">8 Dec 2022</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="main.js"></script>
+    <script src="transfercoin.js"></script>
+</body>
+</html>

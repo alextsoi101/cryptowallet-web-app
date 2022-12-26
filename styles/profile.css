@@ -1,0 +1,293 @@
+/* Change theme */
+:root[data-theme="defaultcolor"] {
+    --logo-bg: #29418a;
+    --mainheader-bg: #001c71;
+    --btn-bg: #001c71;
+    --text-color: #001c71;
+    --text-leftmenu: rgba(157, 161, 183);
+    --text-active-page-bg: rgb(216, 216, 216);
+}
+
+:root[data-theme="orange"] {
+    --logo-bg: #ed9a36;
+    --mainheader-bg: #d47707;
+    --btn-bg: #d47707;
+    --text-color: #d47707;
+    --text-leftmenu: #d0a879;
+    --text-active-page-bg: #d0a879;
+}
+
+:root[data-theme="blue"] {
+    --logo-bg: #2d8cd0;
+    --mainheader-bg: #1377be;
+    --btn-bg: #1377be;
+    --text-color: #1377be;
+    --text-leftmenu: #84b4d6;
+    --text-active-page-bg: #84b4d6;
+}
+
+:root[data-theme="green"] {
+    --logo-bg: #188654;
+    --mainheader-bg: #0d653d;
+    --btn-bg: #0d653d;
+    --text-color: #0d653d;
+    --text-leftmenu: #88c4a9;
+    --text-active-page-bg: #88c4a9;
+}
+
+:root[data-theme="fiolet"] {
+    --logo-bg: #6747a1;
+    --mainheader-bg: #4b2b86;
+    --btn-bg: #4b2b86;
+    --text-color: #4b2b86;
+    --text-leftmenu: #a38dca;
+    --text-active-page-bg: #a38dca;
+}
+
+:root[data-theme="purpure"] {
+    --logo-bg: #a94d8d;
+    --mainheader-bg: #862b6a;
+    --btn-bg: #862b6a;
+    --text-color: #862b6a;
+    --text-leftmenu: #ce8ebb;
+    --text-active-page-bg: #ce8ebb;
+}
+
+/* Change mode */
+:root[data-mode="light"] {
+    --left-bg: #fff;
+    --main-bg: #eff1f6;
+    --containersbg: #fff;
+    --input-and-menu-bg: #fff;
+    --border: rgb(235, 235, 235) 1px solid;
+    --text-mode: #333333;
+}
+
+:root[data-mode="dark"] {
+    --left-bg: #222222;
+    --main-bg: #121212;
+    --containersbg: #222222;
+    --input-and-menu-bg: #333333;
+    --border: rgb(39, 39, 39) 1px solid;
+    --text-mode: #eff1f6;
+}
+
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    height: 100vh;
+    padding-bottom: 100px;
+}
+
+.profile-div-h2 {
+    width: 880px;
+}
+
+.main-h2 {
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.main-profile-span {
+    margin-left: 5px;
+}
+
+.profile-user-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 880px;
+    background-color: var(--containersbg);
+    border-radius: 15px;
+}
+
+.profile-user-photo {
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.profile-user-photo-img {
+    border-radius: 50%;
+    position: relative;
+}
+
+.profile-user-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 55px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-user-info-fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-user-info-firstname-email {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-user-info-firstname {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-user-info-email {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.profile-user-info-lastname-phone {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.profile-user-info-lastname {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-user-info-phone {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.profile-user-info-text {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 600;
+}   
+
+.profile-user-info-input {
+    width: 255px;
+    height: 40px;
+    margin-top: 5px;
+    border: var(--border);
+    box-shadow: 0px 0px 4px 2px rgba(90, 90, 90, 0.1);
+    border-radius: 5px;
+    background-color: var(--input-and-menu-bg);
+}
+
+.profile-user-info-save-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 45px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--btn-bg);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.profile-password-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 880px;
+    background-color: var(--containersbg);
+    border-radius: 15px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.profile-password-h2 {
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.profile-password-info-fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-password-email-newpass {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-password-email {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-password-newpass {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.profile-password-oldpass-confirmpass {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.profile-password-oldpass {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-password-confirmpass {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.profile-password-text {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profile-password-input {
+    width: 390px;
+    height: 40px;
+    margin-top: 5px;
+    border: var(--border);
+    box-shadow: 0px 0px 4px 2px rgba(90, 90, 90, 0.1);
+    border-radius: 5px;
+    background-color: var(--input-and-menu-bg);
+}
+
+.profile-password-update-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 45px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--btn-bg);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.profile-password-bottom-area {
+    padding-bottom: 150px;
+}
