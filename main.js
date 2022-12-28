@@ -50,7 +50,39 @@ modeDark.addEventListener('click', () => {
     document.documentElement.setAttribute('data-mode', "light")
 });
 
+//Light and dark mode MOBILE:
+const modeLightMobile = document.querySelector('.mode-light-mob');
+const modeDarkMobile = document.querySelector('.mode-dark-mob'); 
 
+modeLightMobile.addEventListener('click', () => { 
+    modeDarkMobile.style.display = 'flex'
+    modeLightMobile.style.display = 'none'
+    document.documentElement.setAttribute('data-mode', "dark")
+});
+
+modeDarkMobile.addEventListener('click', () => { 
+    modeLightMobile.style.display = 'flex'
+    modeDarkMobile.style.display = 'none'
+    document.documentElement.setAttribute('data-mode', "light")
+});
+
+
+// MOBILE DROPDOWN MENU:
+
+const dropdownMobileMenu = document.querySelector('.dropdown-mobile-menu');
+const mobileButtonBurger = document.querySelector('.mobile-menu-burger');
+
+let mobMenu = false
+
+mobileButtonBurger.addEventListener('click', () => {
+    if (mobMenu === false) {
+        dropdownMobileMenu.style.display = 'flex';
+        mobMenu = true
+    } else {
+        dropdownMobileMenu.style.display = 'none';
+        mobMenu = false
+    }
+})
 
 
 // MAIN HEADER:

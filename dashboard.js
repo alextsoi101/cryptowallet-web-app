@@ -14,7 +14,6 @@ const options = {
         },
         type: 'area',
         height: '300px',
-        width: '800px',
     },
     colors: ['#001c71'],
     series: [{

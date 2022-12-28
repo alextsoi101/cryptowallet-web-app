@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/transfercoin.css">
     <script src="https://kit.fontawesome.com/96fd5a386b.js" crossorigin="anonymous"></script>
@@ -88,6 +89,7 @@
 
     <main>
         <header class="main-header">
+            <img class="mobile-logo" src="images/logo.png" alt="logo" width="110px" height="25px">
             <div class="main-header-balance">
                 <span class="main-header-icon-wallet"><i class="fa-solid fa-wallet"></i></span>
                 <div class="balancetext-and-current">
@@ -169,10 +171,59 @@
                         </ul>
                     </div> 
                 </div>
+                <div class="mobile-menu-burger">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
             </div>
         </header>
 
+        <div class="dropdown-mobile-menu">
+            <ul class="mobile-menu-pages-list">
+                <li class="mobile-pages-list-item">
+                    <a href="dashboard.html" class="mobile-menu-a"><i class="fas fa-tachometer-alt mobile-menupageicon"></i><span class="mobile-menu-page-page">Dashboard</span></a>
+                </li>
+                <li class="mobile-pages-list-item">
+                    <a href="mywallet.html" class="mobile-menu-a"><i class="fa-solid fa-wallet mobile-menupageicon"></i><span class="mobile-menu-page-page">My Wallet</span></a>
+                </li>
+                <li class="mobile-pages-list-item">
+                    <div class="mobile-menu-a mobile-active-page"><i class="fa-solid fa-coins mobile-menupageicon"></i><span class="mobile-menu-page-page">Transfer Coin</span></div>
+                </li>
+                <li class="mobile-pages-list-item">
+                    <a href="transaction.html" class="mobile-menu-a"><i class="fa-solid fa-clock-rotate-left mobile-menupageicon"></i><span class="mobile-menu-page-page">Transaction</span></a>
+                </li>
+                <li class="mobile-pages-list-item">
+                    <a href="profile.html" class="mobile-menu-a"><i class="fa-solid fa-user mobile-menupageicon"></i><span class="mobile-menu-page-page">Profile</span></a>
+                </li>
+                <li class="mobile-pages-list-item">
+                    <div class="menu-a"><i class="fa-solid fa-right-from-bracket mobile-menupageicon"></i><span class="mobile-menu-page-page">Logout</span></div>
+                </li>
+            </ul>
+        </div>
+
         <div class="transfercoin">
+
+            <div class="mobile-dark-mode">
+                <div class="mobile-dark-mode-left-mob">Dark Mode</div>
+                <div class="light-and-dark">
+                    <div class="mode-light-mob">
+                        <div class="mode-sphere-light-mob"></div>
+                    </div>
+                    <div class="mode-dark-mob">
+                        <div class="mode-sphere-dark-mob"></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="mobile-total-balance">
+                <span class="main-header-icon-wallet"><i class="fa-solid fa-wallet"></i></span>
+                <div class="balancetext-and-current">
+                    <div class="total-blnc-text">Total balance</div>
+                    <div class="total-blnc-digits">657.0378348945 <span>USD</span></div>
+                </div>
+            </div>
+
             <div class="transfercoin-div-h2">
                 <h2 class="transfercoin-h2"><span><i class="fa-solid fa-coins"></i></span><span class="transfercoinh2-span">Transfer Coin</span></h2>
             </div>

@@ -82,6 +82,18 @@
     height: 100vh;
 }
 
+
+
+.mobile-dark-mode {
+    display: none;
+}
+.mobile-total-balance {
+    display: none;
+    
+}
+
+
+
 .dashboard-div-h2 {
     width: 880px;
 }
@@ -103,6 +115,10 @@
     width: 880px;
     background-color: var(--containersbg);
     border-radius: 15px;
+}
+
+#chart {
+    width: 800px;
 }
 
 .dashboard-balance-and-transaction {
@@ -257,4 +273,174 @@
     font-weight: 400;
     font-size: 14px;
     color: #707070;
+}
+
+
+
+/* TABLET SIZE */
+@media all and (max-width: 1200px) {
+    .dashboard-div-h2 {
+        width: 400px;
+    }
+
+    .dashboard-chart {
+        width: 400px;
+    }
+    .dashboard-chart {
+        width: 400px;
+    }
+    #chart {
+        width: 400px;
+    }
+
+    .dashboard-balance-and-transaction {
+        margin-top: 30px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 150px;
+    }
+
+    .dashboard-coin-balance {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--containersbg);
+        border-radius: 15px;
+        width: 400px;
+    }
+
+    .dashboard-last-transaction {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        background-color: var(--containersbg);
+        border-radius: 15px;
+        margin-top: 30px;
+    }
+
+}
+
+
+
+/* MOBILE SIZE */
+@media all and (max-width: 700px) {
+    .mobile-dark-mode {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: var(--logo-bg);
+        border-top: rgb(235, 235, 235) 1px solid;
+        border-bottom: rgb(235, 235, 235) 1px solid;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .mobile-dark-mode-left-mob {
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        margin-left: 15px;
+    }
+
+    .light-and-dark {
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        color: #fff;
+        height: 20px;
+        border-radius: 50px;
+    }
+
+    .mode-light-mob {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+        background-color: #838383;
+        width: 40px;
+        height: 20px;
+        border-radius: 50px;
+    }
+    
+    .mode-dark-mob {
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+        background-color: #b9b9b9;
+        width: 40px;
+        height: 20px;
+        border-radius: 50px;
+    }
+    
+    .mode-sphere-light-mob {
+        margin-left: 2px;
+        background-color: #fff;
+        border-radius: 50px;
+        height: 14px;
+        width: 14px;
+    }
+    
+    .mode-sphere-dark-mob {
+        margin-right: 2px;
+        background-color: #fff;
+        border-radius: 50px;
+        height: 14px;
+        width: 14px;
+    }
+
+    .mobile-total-balance {
+        display: flex;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: var(--mainheader-bg);
+    }
+
+    .main-header-icon-wallet {
+        margin-left: 15px;
+    }
+
+    .dashboard-div-h2 {
+        width: 350px;
+    }
+
+    .dashboard-chart {
+        width: 350px;
+    }
+    
+    #chart {
+        width: 350px;
+    }
+
+    .dashboard-balance-and-transaction {
+        margin-top: 30px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 150px;
+    }
+
+    .dashboard-coin-balance {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--containersbg);
+        border-radius: 15px;
+        width: 350px;
+    }
+
+    .dashboard-last-transaction {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        background-color: var(--containersbg);
+        border-radius: 15px;
+        margin-top: 30px;
+    }
 }
